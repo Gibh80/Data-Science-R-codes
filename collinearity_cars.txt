@@ -1,0 +1,23 @@
+mlr<-lm(MPG~., data = Cars)
+summary(mlr)
+regclass::VIF(mlr)
+vif(mlr)
+MASS::stepAIC(mlr,direction="both")
+MASS::stepAIC(mlr,direction="backward")
+pred<-predict(mlr)
+pred
+mlr$residuals
+
+
+
+
+where VIF is in package regclass ..VIF variance inflation factor tell us which columns are not helping the data or not significant.
+If the result is over 20 of any column then we need to eliminate columns causing collinearity
+We can do this by using  stepAIC which is in MASS packagae.
+Use direction "both" to get the correct subset to calculate the regression. 
+we can do prediction unless we find the regression...R value ..multi R for multiple variables.
+Once we have the best subset then see whether the Y value we have for the data set is matching the Y valu e( IN this case MPG) .
+for that use residuals function ..
+Then conduct analysis
+
+
