@@ -1,0 +1,15 @@
+WC_AT
+mymodel<-lm(AT~Waist,data=WC_AT)
+summary(mymodel)
+pred<-predict(mymodel,newdata = data.frame(Waist=c(30,85,140)))
+pred
+
+Find AT of a person with waist size 30, 85, 140 
+First you should ensure that the waist is between the min and max range in data set.
+If it is outisde this range then the Y value is not correct.
+
+Y^ = B0+B1*x 
+R2 = more than 0.95 and less than 1 is really good
+less than 0.75 is not good
+less than 0.85 is moderate 
+mostly in healthcare they dont consider less than 0.95
