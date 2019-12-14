@@ -1,0 +1,13 @@
+pairs(Cars)
+cor(Cars)
+model.car<-lm(MPG~VOL+HP+SP+WT, data = Cars)
+summary(model.car)
+#Diagnostic plots
+#Residual Plots, QQ-plots, Std.Residuals vs Fitted
+- plot(modelcar)
+-plot(model.car)
+car::residualPlots(model.car)
+car::avPlots(model.car)
+car::qqPlot(model.car)
+influence.measures(model.car)
+car::influenceIndexPlot(model.car)
