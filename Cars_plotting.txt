@@ -11,3 +11,5 @@ car::avPlots(model.car)
 car::qqPlot(model.car)
 influence.measures(model.car)
 car::influenceIndexPlot(model.car)
+to delet the particular line ...we found 77 row as outlier....so we have to remove 
+Car_d77<-Cars[-77,]
